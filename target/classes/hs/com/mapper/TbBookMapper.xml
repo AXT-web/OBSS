@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hs.com.mapper.TbBookMapper" >
+  <resultMap id="BaseResultMap" type="hs.com.entity.TbBook" >
+    <id column="BookId" property="bookid" jdbcType="INTEGER" />
+    <result column="BookTypeId" property="booktypeid" jdbcType="INTEGER" />
+    <result column="BookName" property="bookname" jdbcType="VARCHAR" />
+    <result column="BookPress" property="bookpress" jdbcType="VARCHAR" />
+    <result column="BookAuthor" property="bookauthor" jdbcType="VARCHAR" />
+    <result column="BookTanslor" property="booktanslor" jdbcType="VARCHAR" />
+    <result column="BookPrice" property="bookprice" jdbcType="INTEGER" />
+    <result column="BookPages" property="bookpages" jdbcType="INTEGER" />
+    <result column="BookOutline" property="bookoutline" jdbcType="VARCHAR" />
+    <result column="BookDealmount" property="bookdealmount" jdbcType="INTEGER" />
+    <result column="BookLookmount" property="booklookmount" jdbcType="INTEGER" />
+    <result column="BookStoremount" property="bookstoremount" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    BookId, BookTypeId, BookName, BookPress, BookAuthor, BookTanslor, BookPrice, BookPages, 
+    BookOutline, BookDealmount, BookLookmount, BookStoremount
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_book
+    where BookId = #{bookid,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_book
+    where BookId = #{bookid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="hs.com.entity.TbBook" >
+    insert into tb_book (BookId, BookTypeId, BookName, 
+      BookPress, BookAuthor, BookTanslor, 
+      BookPrice, BookPages, BookOutline, 
+      BookDealmount, BookLookmount, BookStoremount
+      )
+    values (#{bookid,jdbcType=INTEGER}, #{booktypeid,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, 
+      #{bookpress,jdbcType=VARCHAR}, #{bookauthor,jdbcType=VARCHAR}, #{booktanslor,jdbcType=VARCHAR}, 
+      #{bookprice,jdbcType=INTEGER}, #{bookpages,jdbcType=INTEGER}, #{bookoutline,jdbcType=VARCHAR}, 
+      #{bookdealmount,jdbcType=INTEGER}, #{booklookmount,jdbcType=INTEGER}, #{bookstoremount,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="hs.com.entity.TbBook" >
+    insert into tb_book
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="bookid != null" >
+        BookId,
+      </if>
+      <if test="booktypeid != null" >
+        BookTypeId,
+      </if>
+      <if test="bookname != null" >
+        BookName,
+      </if>
+      <if test="bookpress != null" >
+        BookPress,
+      </if>
+      <if test="bookauthor != null" >
+        BookAuthor,
+      </if>
+      <if test="booktanslor != null" >
+        BookTanslor,
+      </if>
+      <if test="bookprice != null" >
+        BookPrice,
+      </if>
+      <if test="bookpages != null" >
+        BookPages,
+      </if>
+      <if test="bookoutline != null" >
+        BookOutline,
+      </if>
+      <if test="bookdealmount != null" >
+        BookDealmount,
+      </if>
+      <if test="booklookmount != null" >
+        BookLookmount,
+      </if>
+      <if test="bookstoremount != null" >
+        BookStoremount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="bookid != null" >
+        #{bookid,jdbcType=INTEGER},
+      </if>
+      <if test="booktypeid != null" >
+        #{booktypeid,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null" >
+        #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="bookpress != null" >
+        #{bookpress,jdbcType=VARCHAR},
+      </if>
+      <if test="bookauthor != null" >
+        #{bookauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="booktanslor != null" >
+        #{booktanslor,jdbcType=VARCHAR},
+      </if>
+      <if test="bookprice != null" >
+        #{bookprice,jdbcType=INTEGER},
+      </if>
+      <if test="bookpages != null" >
+        #{bookpages,jdbcType=INTEGER},
+      </if>
+      <if test="bookoutline != null" >
+        #{bookoutline,jdbcType=VARCHAR},
+      </if>
+      <if test="bookdealmount != null" >
+        #{bookdealmount,jdbcType=INTEGER},
+      </if>
+      <if test="booklookmount != null" >
+        #{booklookmount,jdbcType=INTEGER},
+      </if>
+      <if test="bookstoremount != null" >
+        #{bookstoremount,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="hs.com.entity.TbBook" >
+    update tb_book
+    <set >
+      <if test="booktypeid != null" >
+        BookTypeId = #{booktypeid,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null" >
+        BookName = #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="bookpress != null" >
+        BookPress = #{bookpress,jdbcType=VARCHAR},
+      </if>
+      <if test="bookauthor != null" >
+        BookAuthor = #{bookauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="booktanslor != null" >
+        BookTanslor = #{booktanslor,jdbcType=VARCHAR},
+      </if>
+      <if test="bookprice != null" >
+        BookPrice = #{bookprice,jdbcType=INTEGER},
+      </if>
+      <if test="bookpages != null" >
+        BookPages = #{bookpages,jdbcType=INTEGER},
+      </if>
+      <if test="bookoutline != null" >
+        BookOutline = #{bookoutline,jdbcType=VARCHAR},
+      </if>
+      <if test="bookdealmount != null" >
+        BookDealmount = #{bookdealmount,jdbcType=INTEGER},
+      </if>
+      <if test="booklookmount != null" >
+        BookLookmount = #{booklookmount,jdbcType=INTEGER},
+      </if>
+      <if test="bookstoremount != null" >
+        BookStoremount = #{bookstoremount,jdbcType=INTEGER},
+      </if>
+    </set>
+    where BookId = #{bookid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="hs.com.entity.TbBook" >
+    update tb_book
+    set BookTypeId = #{booktypeid,jdbcType=INTEGER},
+      BookName = #{bookname,jdbcType=VARCHAR},
+      BookPress = #{bookpress,jdbcType=VARCHAR},
+      BookAuthor = #{bookauthor,jdbcType=VARCHAR},
+      BookTanslor = #{booktanslor,jdbcType=VARCHAR},
+      BookPrice = #{bookprice,jdbcType=INTEGER},
+      BookPages = #{bookpages,jdbcType=INTEGER},
+      BookOutline = #{bookoutline,jdbcType=VARCHAR},
+      BookDealmount = #{bookdealmount,jdbcType=INTEGER},
+      BookLookmount = #{booklookmount,jdbcType=INTEGER},
+      BookStoremount = #{bookstoremount,jdbcType=INTEGER}
+    where BookId = #{bookid,jdbcType=INTEGER}
+  </update>
+  <select id="selectid" resultType="hs.com.entity.TbBook">
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+    where
+    BookId=#{BookId}
+  </select>
+  <select id="selectname" resultType="hs.com.entity.TbBook">
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+    where
+    BookName
+    like
+    '%${BookName}%'
+  </select>
+  <select id="selectnamebyBookDealmountdesc" resultType="hs.com.entity.TbBook">
+  select
+  <include refid="Base_Column_List" />
+  from tb_book
+  where
+  BookName
+  like
+  '%${BookName}%'
+  order by
+  BookDealmount
+  desc
+</select>
+  <select id="selectnamebyBookDealmountasc" resultType="hs.com.entity.TbBook">
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+    where
+    BookName
+    like
+    '%${BookName}%'
+    order by
+    BookDealmount
+    asc
+  </select>
+  <select id="selectnamebyBookLookmountdesc" resultType="hs.com.entity.TbBook">
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+    where
+    BookName
+    like
+    '%${BookName}%'
+    order by
+    BookLookmount
+    desc
+  </select>
+  <select id="selectnamebyBookLookmountasc" resultType="hs.com.entity.TbBook">
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+    where
+    BookName
+    like
+    '%${BookName}%'
+    order by
+    BookLookmount
+    asc
+  </select>
+  <select id="selectnamebyBookStoremountdesc" resultType="hs.com.entity.TbBook">
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+    where
+    BookName
+    like
+    '%${BookName}%'
+    order by
+    BookStoremount
+    desc
+  </select>
+  <select id="selectnamebyBookStoremountasc" resultType="hs.com.entity.TbBook">
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+    where
+    BookName
+    like
+    '%${BookName}%'
+    order by
+    BookStoremount
+    asc
+  </select>
+  <update id="updatabook" parameterType="hs.com.entity.TbBook" >
+    update tb_book
+    set BookTypeId = #{booktypeid},
+      BookName = #{bookname},
+      BookPress = #{bookpress},
+      BookAuthor = #{bookauthor},
+      BookTanslor = #{booktanslor},
+      BookPrice = #{bookprice},
+      BookPages = #{bookpages},
+      BookOutline = #{bookoutline},
+      BookDealmount = #{bookdealmount},
+      BookLookmount = #{booklookmount},
+      BookStoremount = #{bookstoremount}
+    where BookId = #{bookid}
+  </update>
+  <insert id="addbook" parameterType="hs.com.entity.TbBook" >
+    insert into tb_book (BookId, BookTypeId, BookName,
+      BookPress, BookAuthor, BookTanslor,
+      BookPrice, BookPages, BookOutline,
+      BookDealmount, BookLookmount, BookStoremount
+      )
+    values (#{bookid}, #{booktypeid}, #{bookname},
+      #{bookpress}, #{bookauthor}, #{booktanslor},
+      #{bookprice}, #{bookpages}, #{bookoutline},
+      #{bookdealmount}, #{booklookmount}, #{bookstoremount}
+      )
+  </insert>
+  <delete id="deletebookforid" parameterType="java.lang.Integer" >
+    delete from tb_book
+    where BookId = #{bookid}
+  </delete>
+  <select id="selectbooktypeid" resultType="hs.com.entity.TbBook">
+    select
+    <include refid="Base_Column_List" />
+    from tb_book
+    where
+    BookTypeId=#{booktypeid}
+  </select>
+</mapper>

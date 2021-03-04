@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hs.com.mapper.TbOrderMapper" >
+  <resultMap id="BaseResultMap" type="hs.com.entity.TbOrder" >
+    <id column="OrderId" property="orderid" jdbcType="CHAR" />
+    <result column="Id" property="id" jdbcType="VARCHAR" />
+    <result column="CustomerId" property="customerid" jdbcType="CHAR" />
+    <result column="Orderdate" property="orderdate" jdbcType="TIMESTAMP" />
+    <result column="Ordermount" property="ordermount" jdbcType="INTEGER" />
+    <result column="message" property="message" jdbcType="VARCHAR" />
+    <result column="postmethod" property="postmethod" jdbcType="VARCHAR" />
+    <result column="paymethod" property="paymethod" jdbcType="VARCHAR" />
+    <result column="recevername" property="recevername" jdbcType="VARCHAR" />
+    <result column="receveraddr" property="receveraddr" jdbcType="VARCHAR" />
+    <result column="recevertel" property="recevertel" jdbcType="VARCHAR" />
+    <result column="memo" property="memo" jdbcType="VARCHAR" />
+    <result column="totalprice" property="totalprice" jdbcType="FLOAT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    OrderId, Id, CustomerId, Orderdate, Ordermount, message, postmethod, paymethod, recevername, 
+    receveraddr, recevertel, memo, totalprice
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_order
+    where OrderId = #{orderid,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_order
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_order
+    where OrderId = #{orderid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="hs.com.entity.TbOrder" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tb_order (OrderId, CustomerId, Orderdate, 
+      Ordermount, message, postmethod, 
+      paymethod, recevername, receveraddr, 
+      recevertel, memo, totalprice
+      )
+    values (#{orderid,jdbcType=CHAR}, #{customerid,jdbcType=CHAR}, #{orderdate,jdbcType=TIMESTAMP}, 
+      #{ordermount,jdbcType=INTEGER}, #{message,jdbcType=VARCHAR}, #{postmethod,jdbcType=VARCHAR}, 
+      #{paymethod,jdbcType=VARCHAR}, #{recevername,jdbcType=VARCHAR}, #{receveraddr,jdbcType=VARCHAR}, 
+      #{recevertel,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}, #{totalprice,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="hs.com.entity.TbOrder" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tb_order
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orderid != null" >
+        OrderId,
+      </if>
+      <if test="customerid != null" >
+        CustomerId,
+      </if>
+      <if test="orderdate != null" >
+        Orderdate,
+      </if>
+      <if test="ordermount != null" >
+        Ordermount,
+      </if>
+      <if test="message != null" >
+        message,
+      </if>
+      <if test="postmethod != null" >
+        postmethod,
+      </if>
+      <if test="paymethod != null" >
+        paymethod,
+      </if>
+      <if test="recevername != null" >
+        recevername,
+      </if>
+      <if test="receveraddr != null" >
+        receveraddr,
+      </if>
+      <if test="recevertel != null" >
+        recevertel,
+      </if>
+      <if test="memo != null" >
+        memo,
+      </if>
+      <if test="totalprice != null" >
+        totalprice,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orderid != null" >
+        #{orderid,jdbcType=CHAR},
+      </if>
+      <if test="customerid != null" >
+        #{customerid,jdbcType=CHAR},
+      </if>
+      <if test="orderdate != null" >
+        #{orderdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ordermount != null" >
+        #{ordermount,jdbcType=INTEGER},
+      </if>
+      <if test="message != null" >
+        #{message,jdbcType=VARCHAR},
+      </if>
+      <if test="postmethod != null" >
+        #{postmethod,jdbcType=VARCHAR},
+      </if>
+      <if test="paymethod != null" >
+        #{paymethod,jdbcType=VARCHAR},
+      </if>
+      <if test="recevername != null" >
+        #{recevername,jdbcType=VARCHAR},
+      </if>
+      <if test="receveraddr != null" >
+        #{receveraddr,jdbcType=VARCHAR},
+      </if>
+      <if test="recevertel != null" >
+        #{recevertel,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="totalprice != null" >
+        #{totalprice,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="hs.com.entity.TbOrder" >
+    update tb_order
+    <set >
+      <if test="id != null" >
+        Id = #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="customerid != null" >
+        CustomerId = #{customerid,jdbcType=CHAR},
+      </if>
+      <if test="orderdate != null" >
+        Orderdate = #{orderdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ordermount != null" >
+        Ordermount = #{ordermount,jdbcType=INTEGER},
+      </if>
+      <if test="message != null" >
+        message = #{message,jdbcType=VARCHAR},
+      </if>
+      <if test="postmethod != null" >
+        postmethod = #{postmethod,jdbcType=VARCHAR},
+      </if>
+      <if test="paymethod != null" >
+        paymethod = #{paymethod,jdbcType=VARCHAR},
+      </if>
+      <if test="recevername != null" >
+        recevername = #{recevername,jdbcType=VARCHAR},
+      </if>
+      <if test="receveraddr != null" >
+        receveraddr = #{receveraddr,jdbcType=VARCHAR},
+      </if>
+      <if test="recevertel != null" >
+        recevertel = #{recevertel,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        memo = #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="totalprice != null" >
+        totalprice = #{totalprice,jdbcType=INTEGER},
+      </if>
+    </set>
+    where OrderId = #{orderid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="hs.com.entity.TbOrder" >
+    update tb_order
+    set Id = #{id,jdbcType=VARCHAR},
+      CustomerId = #{customerid,jdbcType=CHAR},
+      Orderdate = #{orderdate,jdbcType=TIMESTAMP},
+      Ordermount = #{ordermount,jdbcType=INTEGER},
+      message = #{message,jdbcType=VARCHAR},
+      postmethod = #{postmethod,jdbcType=VARCHAR},
+      paymethod = #{paymethod,jdbcType=VARCHAR},
+      recevername = #{recevername,jdbcType=VARCHAR},
+      receveraddr = #{receveraddr,jdbcType=VARCHAR},
+      recevertel = #{recevertel,jdbcType=VARCHAR},
+      memo = #{memo,jdbcType=VARCHAR},
+      totalprice = #{totalprice,jdbcType=INTEGER}
+    where OrderId = #{orderid,jdbcType=CHAR}
+  </update>
+  <update id="updataorder" parameterType="hs.com.entity.TbOrder" >
+    update tb_order
+     set
+      Ordermount = #{ordermount},
+      message = #{message},
+      postmethod = #{postmethod},
+      paymethod = #{paymethod},
+      recevername = #{recevername},
+      receveraddr = #{receveraddr},
+      recevertel = #{recevertel},
+      memo = #{memo},
+      totalprice = #{totalprice}
+    where OrderId = #{orderid}
+  </update>
+  <delete id="deleteorderforid" parameterType="java.lang.String" >
+    delete from tb_order
+    where OrderId = #{orderid}
+  </delete>
+  <select id="selectid" resultType="hs.com.entity.TbOrder">
+    select
+    <include refid="Base_Column_List" />
+    from tb_order
+    where
+    OrderId=#{orderid}
+  </select>
+  <select id="selectcusid" resultType="hs.com.entity.TbOrder">
+    select
+    <include refid="Base_Column_List" />
+    from tb_order
+    where
+    CustomerId=#{customerid}
+  </select>
+  <select id="selectAllfororderdesc" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_order
+    order by
+    OrderId
+    desc
+  </select>
+  <insert id="addorder" parameterType="hs.com.entity.TbOrder" >
+    insert into tb_order (OrderId, Id,CustomerId, Orderdate,
+      Ordermount, message, postmethod,
+      paymethod, recevername, receveraddr,
+      recevertel, memo, totalprice
+      )
+    values (#{orderid},#{id}, #{customerid}, now(),
+      #{ordermount}, #{message}, #{postmethod},
+      #{paymethod}, #{recevername}, #{receveraddr},
+      #{recevertel}, #{memo}, #{totalprice}
+      )
+  </insert>
+</mapper>

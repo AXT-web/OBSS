@@ -1,0 +1,848 @@
+.heng {
+    height: 2px;
+    margin-bottom: 5px;
+    border: 1px solid #761c19;
+}
+.managermain_box {
+    background-color: #fff;
+}
+.mantitlt {
+    height: 60px;
+    padding: 10px 440px;
+    margin-bottom: 15px;
+    background-color: #ccc;
+}
+.mantitlt span {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    color: #761c19;
+}
+.man_main_box {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.tab_man_box {
+    float: left;
+    width: 222px;
+    height: 705px;
+    margin-right: 15px;
+    border: 1px solid #8c8c8c;
+}
+.tab_man_box .tab_title {
+    height: 40px;
+    border-bottom: 1px solid #8c8c8c;
+    background-color: #f4edeb;
+    text-align: center;
+    line-height: 40px;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+.tab_man_box .tab_main {
+    font-size: 17px;
+    margin:  5px 10px 5px 15px;
+}
+.tab_main ul li {
+    margin: 8px 3px;
+}
+.tab_main ul li .tab_two_title {
+    font-weight: bold;
+    padding-left: 10px;
+    background-color: skyblue;
+}
+.tab_main ul li .tab_two_selectbtn {
+    font-weight: 400;
+    font-size: 15px;
+    padding-left: 15px;
+}
+.main_box {
+    float: right;
+    width: 963px;
+    height: 705px;
+    border: 1px solid #8c8c8c;
+}
+.main_box .main_title_box {
+    height: 40px;
+    border-bottom: 1px solid #8c8c8c;
+    background-color: #f4edeb;
+    text-align: center;
+    line-height: 40px;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+.main_box .main_two_title {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 13px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    background-color: #cccccc;
+}
+.main_two_title ul {
+    border-right: none;
+}
+.main_two_title ul li {
+    border-right: 1px solid #8c8c8c;
+    height: 38px;
+    width: 70px;
+    float: left;
+}
+.main_two_title ul .main_action {
+    width: 99px;
+    border-right: none;
+}
+.main_two_title ul li span {
+    float: left;
+    height: 38px;
+    width: 70px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+.main_two_title ul li .main_two_action {
+    float: left;
+    width: 99px;
+    line-height: 38px;
+    letter-spacing: 7px;
+}
+.main_two_title .main_two_tips {
+    padding: 0 20px;
+    height: 38px;
+    line-height: 38px;
+}
+.main_two_title .main_two_tips span {
+    float: left;
+}
+.main_two_title .main_two_tips input {
+    float: left;
+    margin: 6px;
+    height: 25px;
+    width: 160px;
+}
+.main_box .main_two_title .main_two_tips .tab_bookinfor{
+    width: 50px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.main_box .main_two_title .main_two_tips .tab_bookinfor:hover{
+    background-color: #ff852b;
+}
+.main_show_data {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    background-color: #cccccc;
+}
+.main_show_data ul {
+    border-right: none;
+}
+.main_show_data ul li {
+    border-right: 1px solid #8c8c8c;
+    height: 38px;
+    width: 70px;
+    float: left;
+}
+.main_show_data ul li input {
+    float: left;
+    height: 38px;
+    width: 60px;
+    margin: 0 5px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+.main_show_data ul .show_action {
+    width: 99px;
+    border-right: none;
+}
+.main_show_data ul li button {
+    width: 29px;
+    height: 20px;
+    margin: 10px 0px;
+    border: 1px solid #8c8c8c;
+}
+.main_show_data ul li button:hover {
+    background-color: #ff852b;
+}
+.paging_box {
+    height: 50px;
+    padding: 1px 5px;
+}
+.paging_box .paging_ul_box{
+    height: 38px;
+    margin: 5px 0px;
+    background-color: #bdbdbd;
+}
+.paging_box .paging_ul_box ul li {
+    float: left;
+    margin: 6px 10px;
+    height: 27px;
+    line-height: 23px;
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5f5f5f;
+    background-color: #fff;
+    border: 1px solid #5f5f5f;
+    border-radius: 2px;
+}
+.paging_box .paging_ul_box ul li:hover {
+    background-color: red;
+    color: #fff;
+}
+.paging_box .paging_ul_box ul .paging_text{
+    border: 0px;
+    background-color: #bdbdbd;
+}
+.paging_box .paging_ul_box ul li .paging_num{
+    display: inline-block;
+    margin: 0px 0px;
+    width: 10px;
+}
+.paging_box .paging_ul_box ul .paging_text:hover {
+    border: 0px;
+    color: #5f5f5f;
+    background-color: #bdbdbd;
+}
+.paging_box .paging_ul_box ul li input {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #5f5f5f;
+}
+.main_box .main_cus_title {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 13px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    background-color: #cccccc;
+}
+
+.main_cus_title ul {
+    border-right: none;
+}
+.main_cus_title ul li {
+    border-right: 1px solid #8c8c8c;
+    height: 38px;
+    width: 85px;
+    float: left;
+}
+.main_cus_title ul .main_action {
+    width: 99px;
+    border-right: none;
+}
+.main_cus_title ul li span {
+    float: left;
+    height: 38px;
+    width: 85px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+.main_cus_title ul li .main_two_action {
+    float: left;
+    width: 99px;
+    line-height: 38px;
+    letter-spacing: 7px;
+}
+.main_cus_title .main_two_tips {
+    padding: 0 20px;
+    height: 38px;
+    line-height: 38px;
+}
+.main_cus_title .main_two_tips span {
+    float: left;
+}
+.main_cus_title .main_two_tips input {
+    float: left;
+    margin: 6px;
+    height: 25px;
+    width: 160px;
+}
+.main_cus_title .main_two_tips .btn_selectbookid {
+    float: left;
+    margin: 6px;
+    height: 25px;
+    width: 50px;
+}
+.cus_show_data {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    background-color: #cccccc;
+}
+.cus_show_data ul {
+    border-right: none;
+}
+.cus_show_data ul li {
+    border-right: 1px solid #8c8c8c;
+    height: 38px;
+    width: 85px;
+    float: left;
+}
+.cus_show_data ul li input {
+    float: left;
+    height: 38px;
+    width: 75px;
+    margin: 0 2px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    background-color: #cccccc;
+    overflow: hidden;
+}
+.cus_show_data ul li p {
+    float: left;
+    height: 38px;
+    width: 77px;
+    margin: 0 2px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+.cus_show_data ul .show_action {
+    width: 99px;
+    border-right: none;
+}
+.cus_show_data ul li button {
+    width: 30px;
+    height: 20px;
+    margin: 10px 0px;
+    border: 1px solid #8c8c8c;
+}
+.cus_show_data ul li button:hover {
+    background-color: #ff852b;
+}
+.main_cus_title .main_cus_tips {
+    padding: 0 20px;
+    height: 38px;
+    line-height: 38px;
+}
+.main_box .main_two_title .main_two_tips .tab_cusinfor{
+    width: 50px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.main_box .main_two_title .main_two_tips .tab_cusinfor:hover{
+    background-color: #ff852b;
+}
+.main_box .main_booktype_title {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 13px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    background-color: #cccccc;
+}
+.main_booktype_title ul {
+    border-right: none;
+}
+.main_booktype_title ul li {
+    border-right: 1px solid #8c8c8c;
+    height: 38px;
+    width: 140px;
+    float: left;
+}
+.main_booktype_title ul .main_action {
+    width: 99px;
+    border-right: none;
+}
+.main_booktype_title ul li span {
+    float: left;
+    height: 38px;
+    width: 130px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+.main_box .main_booktype_title .main_booktype_tips .tab_booktypeinfor{
+    width: 50px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.main_box .main_booktype_title .main_booktype_tips .tab_booktypeinfor:hover{
+    background-color: #ff852b;
+}
+.booktype_show_data {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    background-color: #cccccc;
+}
+.booktype_show_data ul {
+    border-right: none;
+}
+.booktype_show_data ul li {
+    border-right: 1px solid #8c8c8c;
+    height: 38px;
+    width: 140px;
+    float: left;
+}
+.booktype_show_data ul li input {
+    float: left;
+    height: 38px;
+    width: 130px;
+    margin: 0 2px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+.booktype_show_data ul li p {
+    float: left;
+    height: 38px;
+    width: 89px;
+    margin: 0 2px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+.booktype_show_data ul .show_action {
+    width: 99px;
+    border-right: none;
+}
+.booktype_show_data ul li button {
+    width: 36px;
+    height: 20px;
+    margin: 10px 5px;
+    border: 1px solid #8c8c8c;
+}
+.booktype_show_data ul li button:hover {
+    background-color: #ff852b;
+}
+.main_booktype_title .main_booktype_tips {
+    padding: 0 20px;
+    height: 38px;
+    line-height: 38px;
+}
+.main_box .main_order_title {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 13px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    background-color: #cccccc;
+}
+.main_order_title ul {
+    border-right: none;
+}
+.main_order_title ul li {
+    border-right: 1px solid #8c8c8c;
+    height: 38px;
+    width: 65px;
+    float: left;
+    overflow: hidden;
+}
+.main_order_title ul .main_action {
+    width: 99px;
+    border-right: none;
+}
+.main_order_title ul li span {
+    float: left;
+    height: 38px;
+    width: 52px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+.order_show_data {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    background-color: #cccccc;
+}
+.order_show_data ul {
+    border-right: none;
+}
+.order_show_data ul li {
+    border-right: 1px solid #8c8c8c;
+    height: 38px;
+    width: 65px;
+    float: left;
+}
+.order_show_data ul li input {
+    float: left;
+    height: 38px;
+    width: 55px;
+    margin: 0 2px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    color: #666;
+    background-color: #cccccc;
+}
+.order_show_data ul li p {
+    float: left;
+    height: 38px;
+    width: 55px;
+    margin: 0 2px;
+    line-height: 38px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+.order_show_data ul .show_action {
+    width: 99px;
+    border-right: none;
+}
+.order_show_data ul li button {
+    width: 32px;
+    height: 20px;
+    margin: 10px -1px;
+    border: 1px solid #8c8c8c;
+}
+.order_show_data ul li button:hover {
+    background-color: #ff852b;
+}
+.main_box .add_book_tab {
+    margin: 5px 15px;
+}
+.main_box .add_book_tab ul {
+    position: relative;
+    padding: 5px 0px;
+}
+.main_box .add_book_tab ul li {
+    margin: 5px 5px;
+}
+.main_box .add_book_tab ul li span {
+    float: left;
+    height: 30px;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 5px;
+}
+.main_box .add_book_tab ul li div {
+    float: left;
+    height: 30px;
+    border-bottom: 1px solid #8c8c8c;
+}
+.main_box .add_book_tab ul li div  div{
+    outline: none;
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 400;
+    min-width: 10px;
+    letter-spacing: 1px;
+    padding: 0 5px;
+}
+.main_box .add_book_tab ul li textarea {
+    float: left;
+    padding: 5px;
+    margin: 5px 0;
+}
+.main_box .add_book_tab ul li .addbook_btn {
+    margin-left: 70px;
+    margin-top: 19px;
+    background-color: #ddd;
+    width: 75px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+}
+.main_box .add_book_tab ul li .addbook_btn:hover {
+    background-color: #ff852b;
+}
+.main_box .add_book_tab ul .add_show_img_box {
+    position: absolute;
+    top: 12px;
+    left: 789px;
+    width: 110px;
+    height: 176px;
+    border: none;
+}
+.main_box .add_book_tab ul li .add_book_img {
+    width: 110px;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+.main_box .add_book_tab ul li .add_book_img img {
+    width: 110px;
+    height: 150px;
+    max-height: 150px;
+    max-width: 110px;
+}
+.main_box .add_book_tab ul li .add_book_img_a {
+    width: 110px;
+    height: 25px;
+    border: none;
+}
+.main_box .add_book_tab ul li .add_book_img_a a{
+    float: left;
+    width: 110px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 25px;
+}
+.main_box .add_book_img_box {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 13px 5px 0 5px;
+    border: 1px solid #8c8c8c;
+    padding: 8px 20px;
+    background-color: #cccccc;
+}
+.add_book_img_box form {
+    font-size: 15px;
+    font-weight: bold;
+}
+.add_book_img_box form .uploadimg_selectimg{
+    float: left;
+}
+.add_book_img_box form .uploadimg_submit {
+    float: left;
+    width: 38px;
+    height: 22px;
+}
+.add_book_img_box form .uploadimg_submit input {
+    float: left;
+    width: 38px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+.add_book_img_box form .uploadimg_submit input:hover {
+    background-color: #ff852b;
+}
+.add_book_img_box form .uploadimg_back {
+    float: left;
+    height: 22px;
+}
+.add_book_img_box form .uploadimg_back input {
+    float: left;
+    padding: 0 5px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    margin-left: 10px;;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+.add_book_img_box form .uploadimg_back input:hover{
+    background-color: #ff852b;
+}
+
+#mybtn,
+#clearall {
+    width: 110px;
+    height: 30px;
+    font-size: 18px;
+    background-color: #00a0e9;
+    border: none;
+    text-align: center;
+    color: #FFF;
+}
+#prevw {
+    width: 200px;
+    height: 200px;
+}
+
+#imgshow {
+    width: 110px;
+    height: 150px;
+    background-image: url(../upload/shuruimg.png);
+    background-size: 100% 100%;
+}
+
+#myfile {
+    opacity: 0;
+    width: 110px;
+    height: 150px;
+}
+
+#mybtn1,
+#clearall1 {
+    width: 110px;
+    height: 30px;
+    font-size: 18px;
+    background-color: #00a0e9;
+    border: none;
+    text-align: center;
+    color: #FFF;
+}
+#prevw1 {
+    width: 200px;
+    height: 200px;
+}
+
+#imgshow1 {
+    width: 110px;
+    height: 150px;
+    background-image: url(../upload/shuruimg.png);
+    background-size: 100% 100%;
+}
+
+#myfile1 {
+    opacity: 0;
+    width: 110px;
+    height: 150px;
+}
+
+
+/*以下是显示用户详细信息页面的css*/
+.main_box .add_cus_tab {
+    margin: 5px 15px;
+}
+.main_box .add_cus_tab ul {
+    position: relative;
+    padding: 5px 0px;
+}
+.main_box .add_cus_tab ul li {
+    margin: 5px 5px;
+}
+.main_box .add_cus_tab ul li span {
+    float: left;
+    height: 30px;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 5px;
+}
+.main_box .add_cus_tab ul li div {
+    float: left;
+    height: 30px;
+    border-bottom: 1px solid #8c8c8c;
+}
+.main_box .add_cus_tab ul li div  div{
+    outline: none;
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 400;
+    min-width: 10px;
+    letter-spacing: 1px;
+    padding: 0 5px;
+}
+.main_box .add_cus_tab ul li textarea {
+    float: left;
+    padding: 5px;
+    margin: 5px 0;
+}
+.main_box .add_cus_tab ul li .addcus_btn {
+    margin-left: 70px;
+    margin-top: 19px;
+    background-color: #ddd;
+    width: 75px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+}
+.main_box .add_cus_tab ul li .addcus_btn:hover {
+    background-color: #ff852b;
+}
+.main_box .add_cus_tab ul .add_show_cus_img_box {
+    position: absolute;
+    top: 12px;
+    left: 789px;
+    width: 110px;
+    height: 176px;
+    border: none;
+    background-color: skyblue;
+}
+#mybtn2,
+ #clearall2 {
+     width: 110px;
+     height: 30px;
+     font-size: 18px;
+     background-color: #00a0e9;
+     border: none;
+     text-align: center;
+     color: #FFF;
+ }
+#prevw2 {
+    width: 200px;
+    height: 200px;
+}
+
+#imgshow2 {
+    width: 110px;
+    height: 150px;
+    background-image: url(../upload/shuruimg.png);
+    background-size: 100% 100%;
+}
+
+#myfile2 {
+    opacity: 0;
+    width: 110px;
+    height: 150px;
+}
+
+#mybtn3,
+#clearall3 {
+    width: 110px;
+    height: 30px;
+    font-size: 18px;
+    background-color: #00a0e9;
+    border: none;
+    text-align: center;
+    color: #FFF;
+}
+#prevw3 {
+    width: 200px;
+    height: 200px;
+}
+
+#imgshow3 {
+    width: 110px;
+    height: 150px;
+    background-image: url(../upload/shuruimg.png);
+    background-size: 100% 100%;
+}
+
+#myfile3 {
+    opacity: 0;
+    width: 110px;
+    height: 150px;
+}
+.main_box .main_two_title .main_two_tips .tab_orderinfor{
+    width: 50px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.main_box .main_two_title .main_two_tips .tab_orderinfor:hover{
+    background-color: #ff852b;
+}
+.main_order_title .main_order_tips {
+    padding: 0 20px;
+    height: 38px;
+    line-height: 38px;
+}

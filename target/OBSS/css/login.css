@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../font/icomoon.eot?4rom1s');
+    src:  url('../font/icomoon.eot?4rom1s#iefix') format('embedded-opentype'),
+    url('../font/icomoon.ttf?4rom1s') format('truetype'),
+    url('../font/icomoon.woff?4rom1s') format('woff'),
+    url('../font/icomoon.svg?4rom1s#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    height: 84px;
+}
+.log_wrap {
+    height: 478px;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-image: url(../images/timg.jpg);
+}
+.log_wrap .log_form {
+    float: right;
+    top: 50px;
+    right: 50px;
+}
+.log_form {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    z-index: 4;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 3px rgb(185, 184, 184);
+    overflow: visible;
+}
+.log_title {
+    height: 54px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 10px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    background-color: skyblue;
+}
+.log_box {
+    position: relative;
+    height: 150px;
+    margin-top: 22px;
+    background-color: #fff;
+}
+.item_loginname {
+    height: 41px;
+    margin: 0 22px;
+    border: 2px solid #bdbdbd;
+    background-color: #fff;
+}
+.login_label {
+    width: 40px;
+}
+.name_label {
+    position: absolute;
+    height: 38px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 38px;
+    background-color: rgb(211, 210, 210);
+}
+.name_label::before {
+    content: '\e971';
+    font-family: 'icomoon';
+    color: #666363;
+}
+.log_name {
+    height: 38px;
+    width: 213px;
+    margin-left: 40px;
+    padding: 10px 10px;
+    background-color: #fff;
+}
+.item_loginpwd {
+    height: 41px;
+    margin: 0 22px;
+    margin-top: 18px;
+    border: 2px solid #bdbdbd;
+    background-color: #fff;
+}
+.pwd_label {
+    position: absolute;
+    height: 38px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 38px;
+    background-color: rgb(211, 210, 210);
+}
+.pwd_label::before {
+    content: '\e98f';
+    font-family: 'icomoon';
+    color: #666363;
+}
+.log_pwd{
+    height: 38px;
+    width: 213px;
+    margin-left: 40px;
+    padding: 10px 10px;
+    background-color: #fff;
+}
+.log_box .item_forget {
+    position: relative;
+    height: 40px;
+}
+.log_box .item_forget p
+{
+    position: absolute;
+    display: none;
+    top: 12px;
+    left: 25px;
+    color: red;
+    font-weight: 700;
+    text-indent: 1.5em;
+    background: url(../images/wrong.png) no-repeat center left;
+}
+.log_box .item_forget a{
+    position: absolute;
+    top: 10px;
+    left: 230px;
+    font-weight: 600;
+    color: red;
+}
+.item_btn {
+    height: 40px;
+    background-color: #fff;
+}
+.log_btn {
+    display: block;
+    height: 35px;
+    margin: 0 23px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 17px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: red;
+}
+.log_reg {
+    height: 40px;
+    margin: 10px 20px;
+}
+.log_reg a {
+    color: red;
+    font-weight: 500;
+}

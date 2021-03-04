@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hs.com.mapper.TbCustomerMapper" >
+  <resultMap id="BaseResultMap" type="hs.com.entity.TbCustomer" >
+    <id column="CustomerID" property="customerid" jdbcType="CHAR" />
+    <result column="CustomerName" property="customername" jdbcType="VARCHAR" />
+    <result column="CustomerPwd" property="customerpwd" jdbcType="VARCHAR" />
+    <result column="Customertruename" property="customertruename" jdbcType="VARCHAR" />
+    <result column="CustomerSex" property="customersex" jdbcType="VARCHAR" />
+    <result column="CustomerTel" property="customertel" jdbcType="VARCHAR" />
+    <result column="CustomerAddr" property="customeraddr" jdbcType="VARCHAR" />
+    <result column="CustomerRegTime" property="customerregtime" jdbcType="TIMESTAMP" />
+    <result column="CustomerQuer" property="customerquer" jdbcType="VARCHAR" />
+    <result column="CustomerAnswer" property="customeranswer" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    CustomerID, CustomerName, CustomerPwd, Customertruename, CustomerSex, CustomerTel, 
+    CustomerAddr, CustomerRegTime, CustomerQuer, CustomerAnswer
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_customer
+    where CustomerID = #{customerid,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_customer
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_customer
+    where CustomerID = #{customerid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="hs.com.entity.TbCustomer" >
+    insert into tb_customer (CustomerID, CustomerName, CustomerPwd, 
+      Customertruename, CustomerSex, CustomerTel, 
+      CustomerAddr, CustomerRegTime, CustomerQuer, 
+      CustomerAnswer)
+    values (#{customerid,jdbcType=CHAR}, #{customername,jdbcType=VARCHAR}, #{customerpwd,jdbcType=VARCHAR}, 
+      #{customertruename,jdbcType=VARCHAR}, #{customersex,jdbcType=VARCHAR}, #{customertel,jdbcType=VARCHAR}, 
+      #{customeraddr,jdbcType=VARCHAR}, #{customerregtime,jdbcType=TIMESTAMP}, #{customerquer,jdbcType=VARCHAR}, 
+      #{customeranswer,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="hs.com.entity.TbCustomer" >
+    insert into tb_customer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="customerid != null" >
+        CustomerID,
+      </if>
+      <if test="customername != null" >
+        CustomerName,
+      </if>
+      <if test="customerpwd != null" >
+        CustomerPwd,
+      </if>
+      <if test="customertruename != null" >
+        Customertruename,
+      </if>
+      <if test="customersex != null" >
+        CustomerSex,
+      </if>
+      <if test="customertel != null" >
+        CustomerTel,
+      </if>
+      <if test="customeraddr != null" >
+        CustomerAddr,
+      </if>
+      <if test="customerregtime != null" >
+        CustomerRegTime,
+      </if>
+      <if test="customerquer != null" >
+        CustomerQuer,
+      </if>
+      <if test="customeranswer != null" >
+        CustomerAnswer,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="customerid != null" >
+        #{customerid,jdbcType=CHAR},
+      </if>
+      <if test="customername != null" >
+        #{customername,jdbcType=VARCHAR},
+      </if>
+      <if test="customerpwd != null" >
+        #{customerpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="customertruename != null" >
+        #{customertruename,jdbcType=VARCHAR},
+      </if>
+      <if test="customersex != null" >
+        #{customersex,jdbcType=VARCHAR},
+      </if>
+      <if test="customertel != null" >
+        #{customertel,jdbcType=VARCHAR},
+      </if>
+      <if test="customeraddr != null" >
+        #{customeraddr,jdbcType=VARCHAR},
+      </if>
+      <if test="customerregtime != null" >
+        #{customerregtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customerquer != null" >
+        #{customerquer,jdbcType=VARCHAR},
+      </if>
+      <if test="customeranswer != null" >
+        #{customeranswer,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="hs.com.entity.TbCustomer" >
+    update tb_customer
+    <set >
+      <if test="customername != null" >
+        CustomerName = #{customername,jdbcType=VARCHAR},
+      </if>
+      <if test="customerpwd != null" >
+        CustomerPwd = #{customerpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="customertruename != null" >
+        Customertruename = #{customertruename,jdbcType=VARCHAR},
+      </if>
+      <if test="customersex != null" >
+        CustomerSex = #{customersex,jdbcType=VARCHAR},
+      </if>
+      <if test="customertel != null" >
+        CustomerTel = #{customertel,jdbcType=VARCHAR},
+      </if>
+      <if test="customeraddr != null" >
+        CustomerAddr = #{customeraddr,jdbcType=VARCHAR},
+      </if>
+      <if test="customerregtime != null" >
+        CustomerRegTime = #{customerregtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customerquer != null" >
+        CustomerQuer = #{customerquer,jdbcType=VARCHAR},
+      </if>
+      <if test="customeranswer != null" >
+        CustomerAnswer = #{customeranswer,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CustomerID = #{customerid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="hs.com.entity.TbCustomer" >
+    update tb_customer
+    set CustomerName = #{customername,jdbcType=VARCHAR},
+      CustomerPwd = #{customerpwd,jdbcType=VARCHAR},
+      Customertruename = #{customertruename,jdbcType=VARCHAR},
+      CustomerSex = #{customersex,jdbcType=VARCHAR},
+      CustomerTel = #{customertel,jdbcType=VARCHAR},
+      CustomerAddr = #{customeraddr,jdbcType=VARCHAR},
+      CustomerRegTime = #{customerregtime,jdbcType=TIMESTAMP},
+      CustomerQuer = #{customerquer,jdbcType=VARCHAR},
+      CustomerAnswer = #{customeranswer,jdbcType=VARCHAR}
+    where CustomerID = #{customerid,jdbcType=CHAR}
+  </update>
+  <select id="login" resultType="hs.com.entity.TbCustomer">
+    select
+    <include refid="Base_Column_List" />
+    from tb_customer
+    where
+    CustomerID=#{customerid}
+    and
+    CustomerPwd=#{customerpwd}
+  </select>
+  <insert id="register" parameterType="hs.com.entity.TbCustomer" >
+    insert into
+    tb_customer (CustomerID, CustomerPwd,CustomerRegTime)
+    values
+    (#{customerid}, #{customerpwd},now())
+  </insert>
+  <select id="selectid" resultType="hs.com.entity.TbCustomer">
+    select
+    <include refid="Base_Column_List" />
+    from tb_customer
+    where
+    CustomerID
+    like
+    '%${customerid}%'
+  </select>
+  <select id="selectname" resultType="hs.com.entity.TbCustomer">
+    select
+    <include refid="Base_Column_List" />
+    from tb_customer
+    where
+    CustomerName
+    like
+    '%${customername}%'
+  </select>
+  <select id="selectids" resultType="hs.com.entity.TbCustomer">
+    select
+    <include refid="Base_Column_List" />
+    from tb_customer
+    where
+    CustomerID=#{customerid}
+  </select>
+  <update id="updateTbCustomer" parameterType="hs.com.entity.TbCustomer" >
+    update tb_customer
+    set CustomerName = #{customername},
+      Customertruename = #{customertruename},
+      CustomerSex = #{customersex},
+      CustomerTel = #{customertel},
+      CustomerAddr = #{customeraddr},
+      CustomerQuer = #{customerquer},
+      CustomerAnswer = #{customeranswer}
+    where CustomerID = #{customerid}
+  </update>
+  <insert id="addcus" parameterType="hs.com.entity.TbCustomer" >
+    insert into tb_customer (CustomerID, CustomerName, CustomerPwd,
+      Customertruename, CustomerSex, CustomerTel,
+      CustomerAddr, CustomerRegTime, CustomerQuer,
+      CustomerAnswer
+      )
+    values (#{customerid}, #{customername}, #{customerpwd},
+      #{customertruename}, #{customersex}, #{customertel},
+      #{customeraddr}, #{customerregtime}, #{customerquer},
+      #{customeranswer}
+      )
+  </insert>
+  <delete id="deletecusforid" parameterType="java.lang.String" >
+    delete from tb_customer
+    where CustomerID = #{customerid}
+  </delete>
+
+  <update id="updatapwd" parameterType="hs.com.entity.TbCustomer" >
+    update tb_customer
+    set CustomerPwd = #{customerpwd}
+    where CustomerID = #{customerid}
+  </update>
+
+  <update id="updataanswerand" parameterType="hs.com.entity.TbCustomer" >
+    update tb_customer
+    set CustomerQuer = #{customerquer},
+      CustomerAnswer = #{customeranswer}
+    where CustomerID = #{customerid}
+  </update>
+</mapper>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hs.com.mapper.TbManagerMapper" >
+  <resultMap id="BaseResultMap" type="hs.com.entity.TbManager" >
+    <id column="AdminId" property="adminid" jdbcType="CHAR" />
+    <result column="AdminName" property="adminname" jdbcType="VARCHAR" />
+    <result column="AdminPwd" property="adminpwd" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    AdminId, AdminName, AdminPwd
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_manager
+    where AdminId = #{adminid,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_manager
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_manager
+    where AdminId = #{adminid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="hs.com.entity.TbManager" >
+    insert into tb_manager (AdminId, AdminName, AdminPwd
+      )
+    values (#{adminid,jdbcType=CHAR}, #{adminname,jdbcType=VARCHAR}, #{adminpwd,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="hs.com.entity.TbManager" >
+    insert into tb_manager
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="adminid != null" >
+        AdminId,
+      </if>
+      <if test="adminname != null" >
+        AdminName,
+      </if>
+      <if test="adminpwd != null" >
+        AdminPwd,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="adminid != null" >
+        #{adminid,jdbcType=CHAR},
+      </if>
+      <if test="adminname != null" >
+        #{adminname,jdbcType=VARCHAR},
+      </if>
+      <if test="adminpwd != null" >
+        #{adminpwd,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="hs.com.entity.TbManager" >
+    update tb_manager
+    <set >
+      <if test="adminname != null" >
+        AdminName = #{adminname,jdbcType=VARCHAR},
+      </if>
+      <if test="adminpwd != null" >
+        AdminPwd = #{adminpwd,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where AdminId = #{adminid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="hs.com.entity.TbManager" >
+    update tb_manager
+    set AdminName = #{adminname,jdbcType=VARCHAR},
+      AdminPwd = #{adminpwd,jdbcType=VARCHAR}
+    where AdminId = #{adminid,jdbcType=CHAR}
+  </update>
+  <select id="login" resultType="hs.com.entity.TbManager">
+    select
+    <include refid="Base_Column_List" />
+    from tb_manager
+    where
+    AdminId=#{adminid}
+    and
+    AdminPwd=#{adminpwd}
+  </select>
+</mapper>

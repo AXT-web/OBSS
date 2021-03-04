@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hs.com.mapper.TbOrderdetailMapper" >
+  <resultMap id="BaseResultMap" type="hs.com.entity.TbOrderdetail" >
+    <id column="OrderDetailld" property="orderdetailld" jdbcType="CHAR" />
+    <result column="Id" property="id" jdbcType="VARCHAR" />
+    <result column="OrderId" property="orderid" jdbcType="CHAR" />
+    <result column="BookId" property="bookid" jdbcType="INTEGER" />
+    <result column="ordermount" property="ordermount" jdbcType="INTEGER" />
+    <result column="poststatus" property="poststatus" jdbcType="VARCHAR" />
+    <result column="Recevstatus" property="recevstatus" jdbcType="VARCHAR" />
+    <result column="sigletotalprice" property="sigletotalprice" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    OrderDetailld, Id, OrderId, BookId, ordermount, poststatus, Recevstatus, sigletotalprice
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_orderdetail
+    where OrderDetailld = #{orderdetailld,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_orderdetail
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_orderdetail
+    where OrderDetailld = #{orderdetailld,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="hs.com.entity.TbOrderdetail" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tb_orderdetail (OrderDetailld, OrderId, BookId, 
+      ordermount, poststatus, Recevstatus, 
+      sigletotalprice)
+    values (#{orderdetailld,jdbcType=CHAR}, #{orderid,jdbcType=CHAR}, #{bookid,jdbcType=INTEGER}, 
+      #{ordermount,jdbcType=INTEGER}, #{poststatus,jdbcType=VARCHAR}, #{recevstatus,jdbcType=VARCHAR}, 
+      #{sigletotalprice,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="hs.com.entity.TbOrderdetail" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tb_orderdetail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orderdetailld != null" >
+        OrderDetailld,
+      </if>
+      <if test="orderid != null" >
+        OrderId,
+      </if>
+      <if test="bookid != null" >
+        BookId,
+      </if>
+      <if test="ordermount != null" >
+        ordermount,
+      </if>
+      <if test="poststatus != null" >
+        poststatus,
+      </if>
+      <if test="recevstatus != null" >
+        Recevstatus,
+      </if>
+      <if test="sigletotalprice != null" >
+        sigletotalprice,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orderdetailld != null" >
+        #{orderdetailld,jdbcType=CHAR},
+      </if>
+      <if test="orderid != null" >
+        #{orderid,jdbcType=CHAR},
+      </if>
+      <if test="bookid != null" >
+        #{bookid,jdbcType=INTEGER},
+      </if>
+      <if test="ordermount != null" >
+        #{ordermount,jdbcType=INTEGER},
+      </if>
+      <if test="poststatus != null" >
+        #{poststatus,jdbcType=VARCHAR},
+      </if>
+      <if test="recevstatus != null" >
+        #{recevstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="sigletotalprice != null" >
+        #{sigletotalprice,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="hs.com.entity.TbOrderdetail" >
+    update tb_orderdetail
+    <set >
+      <if test="id != null" >
+        Id = #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="orderid != null" >
+        OrderId = #{orderid,jdbcType=CHAR},
+      </if>
+      <if test="bookid != null" >
+        BookId = #{bookid,jdbcType=INTEGER},
+      </if>
+      <if test="ordermount != null" >
+        ordermount = #{ordermount,jdbcType=INTEGER},
+      </if>
+      <if test="poststatus != null" >
+        poststatus = #{poststatus,jdbcType=VARCHAR},
+      </if>
+      <if test="recevstatus != null" >
+        Recevstatus = #{recevstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="sigletotalprice != null" >
+        sigletotalprice = #{sigletotalprice,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where OrderDetailld = #{orderdetailld,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="hs.com.entity.TbOrderdetail" >
+    update tb_orderdetail
+    set Id = #{id,jdbcType=VARCHAR},
+      OrderId = #{orderid,jdbcType=CHAR},
+      BookId = #{bookid,jdbcType=INTEGER},
+      ordermount = #{ordermount,jdbcType=INTEGER},
+      poststatus = #{poststatus,jdbcType=VARCHAR},
+      Recevstatus = #{recevstatus,jdbcType=VARCHAR},
+      sigletotalprice = #{sigletotalprice,jdbcType=VARCHAR}
+    where OrderDetailld = #{orderdetailid,jdbcType=CHAR}
+  </update>
+
+  <delete id="deleteordertailforid" parameterType="java.lang.String" >
+    delete from tb_orderdetail
+    where OrderId = #{orderid}
+  </delete>
+
+  <select id="selectid" resultType="hs.com.entity.TbOrderdetail">
+    select
+    <include refid="Base_Column_List" />
+    from tb_orderdetail
+    where
+    OrderId=#{orderid}
+  </select>
+  <update id="updataorderdetail" parameterType="hs.com.entity.TbOrderdetail" >
+    update tb_orderdetail
+    set Id = #{id},
+      OrderId = #{orderid},
+      BookId = #{bookid},
+      ordermount = #{ordermount},
+      poststatus = #{poststatus},
+      Recevstatus = #{recevstatus},
+      sigletotalprice = #{sigletotalprice}
+    where OrderDetailld = #{orderdetailid}
+  </update>
+
+  <select id="selectpoststatus" resultType="hs.com.entity.TbOrderdetail">
+    select
+    <include refid="Base_Column_List" />
+    from tb_orderdetail
+    where
+    poststatus=#{poststatus}
+  </select>
+
+  <select id="selectnoget" resultType="hs.com.entity.TbOrderdetail">
+    select
+    <include refid="Base_Column_List" />
+    from tb_orderdetail
+    where
+    poststatus=#{poststatus}
+    and
+    Recevstatus=#{recevstatus}
+    and
+    OrderId=#{orderid}
+  </select>
+  <update id="updataorderstatus" parameterType="hs.com.entity.TbOrderdetail" >
+    update tb_orderdetail
+    set
+      poststatus = #{poststatus},
+      Recevstatus = #{recevstatus}
+    where OrderId = #{orderid}
+  </update>
+  <select id="selectAllfororderdetaildesc" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_orderdetail
+    order by
+    OrderDetailld
+    desc
+  </select>
+  <insert id="addorderdetail" parameterType="hs.com.entity.TbOrder" >
+    insert into tb_orderdetail (OrderDetailld,Id, OrderId, BookId,
+      ordermount, poststatus, Recevstatus,
+      sigletotalprice)
+    values (#{orderdetailld},#{id}, #{orderid}, #{bookid},
+      #{ordermount}, #{poststatus}, #{recevstatus},
+      #{sigletotalprice})
+  </insert>
+</mapper>

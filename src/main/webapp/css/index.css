@@ -1,0 +1,369 @@
+/* 主体大盒子 */
+.main {
+    width: 980px;
+    height: 455px;
+    /* background-color: skyblue; */
+    margin-left: 220px;
+    margin-top: 10px;
+}
+/* 主体大图片 */
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+    background-color: purple;
+}
+.focus img {
+    width: 721px;
+    height: 455px;
+    max-width: 100%;
+    max-height: 100%;
+    background: no-repeat center center;
+}
+/* 新闻焦点 */
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+.news {
+    height: 165px;
+   border: 2px solid #afafaf;
+}
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 2px dotted #afafaf;
+    padding: 0 15px;
+}
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+.news-hd .more {
+    float: right;
+}
+.news-hd .more::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}
+.news-bd {
+    padding: 5px 15px 0;
+}
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.promotional {
+    height: 280px;
+    background-color: #fff;
+    margin-top: 10px;
+    border: 2px solid #afafaf;
+}
+.promotional-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 2px dotted #afafaf;
+    padding: 0 15px;
+}
+.promotional-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+.promotional-hd .more1 {
+    float: right;
+}
+.promotional-hd .more1::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}   
+.promotional-bd {
+    position: relative;
+    padding: 5px 15px 0;
+}
+.promotional-bd .goods-box {
+    margin-top: 10px;
+    height: 140px;
+}
+.goods-box .img-box
+{
+    float:left;
+    height: 140px;
+    width: 140px;
+}
+.goods-box .img-box img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.goods-box h5 {
+    padding-top: 50px;
+}
+.original-price,
+.present-price {
+    margin: 10px 0;
+    height: 20px;
+    margin: 0 auto;
+}
+.promotional-bd .original-price h3,
+.promotional-bd .original-price h4,
+.promotional-bd .present-price h3,
+.promotional-bd .present-price h4 {
+    display: inline-block;
+    font-size: 15px;
+}
+.promotional-bd .original-price h3,
+.promotional-bd .present-price h3{
+        text-indent: 4em;
+}
+.promotional-bd .original-price h4,
+.promotional-bd .present-price h4 {
+    color: red;
+}
+.promotional-bd .original-price h4 {
+    text-decoration: line-through;
+}
+.bargain {
+    margin-top: 5px;
+}
+.floor .w {
+    margin-top: 20px;
+}
+/* 推荐模块盒子 */
+.mod_recommend {   
+    float: left;
+    height: 450px;
+    width: 940px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #afafaf;
+    /* background-color: skyblue; */
+}
+.mod_recommend .h3_box {
+    height: 35px;
+    border-bottom: 2px solid #afafaf;
+}
+.mod_recommend h3 {
+    float: left;
+    width: 170px;
+    line-height: 35px;
+    font-size: 16px;
+    border-right: 2px solid #afafaf;
+    border-top: 0px;
+    color: #c81623;
+    text-align: center;
+}
+.mod_recommend .classification {
+    height: 30px;
+    margin: 20px 0px ;
+}
+.mod_recommend .classification h4 {
+    float: left;
+    width: 100px;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin: 0px 20px;
+    color: #FFF;
+    text-align: center;
+    background-color: #c81623;
+}
+.mod_recommend .book {
+    height: 343px;
+    width: 937px;
+}
+.book .book_box {
+    height: 343px;
+    width: 937px;
+}
+.book ul li {
+    float: left;
+    position: relative;
+    height: 343px;
+    width: 187px;
+    color: black;
+}
+.book_photo_box {
+    position: relative;
+    width: 187px;
+    height: 240px;
+}
+.book_photo_box img {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+.number_photo_box {
+    position: absolute;
+    top: -5px;
+    left: 120px;
+    width: 32px;
+    height: 36px;
+    
+}
+.book p {
+    font-size: 15px;
+}
+    
+.firstp {               /*商品名字的p标签*/
+    width: 187px;
+    height: 60px;
+}
+.scanp{                 /*价格的那个p标签*/
+    margin-left: 20px;
+}
+.scanp span:last-child {
+    color: red;
+}
+/* 排行榜 */
+.mod_bookslist {
+    float: right;
+    height: 450px;
+    width: 250px;
+    border-radius: 2px;
+    border: 2px solid #afafaf;
+}
+.mod_bookslist h5 {
+    height: 33px;
+    line-height: 33px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #c81623;
+    border-bottom: 2px solid #afafaf;
+    padding: 0 15px;
+}
+.nav_booksclass {
+    height: 33px;
+    width: 250px;
+}
+.nav_booksclass ul li {
+    float: left;
+    margin: 5px 5px;
+}
+.nav_booksclass ul li span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #afafaf;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.nav_booksclass ul li span:hover {
+    background:#afafaf;
+    color: #fff;
+}
+.bookslist {
+    height: 380px;
+    width: 250px;
+}
+.bookslist ul li {
+    height: 38px;
+    width: 250px;
+}
+div[class^="rank_"] {
+    float: left;
+    height: 38px;
+    width: 38px;
+    color: red;
+}
+.rank_1 {
+    background: url(../images/rank_1.jpg) no-repeat center center;
+}
+.rank_2 {
+    background: url(../images/rank_2.jpg) no-repeat center center;
+}
+.rank_3 {
+    background: url(../images/rank_3.jpg) no-repeat center center;
+}
+.rank_4 {
+    background: url(../images/rank_4.jpg) no-repeat center center;
+}
+.rank_5 {
+    background: url(../images/rank_5.jpg) no-repeat center center;
+}
+.rank_6 {
+    background: url(../images/rank_6.jpg) no-repeat center center;
+}
+.rank_7 {
+    background: url(../images/rank_7.jpg) no-repeat center center;
+}
+.rank_8 {
+    background: url(../images/rank_8.jpg) no-repeat center center;
+}
+.rank_9 {
+    background: url(../images/rank_9.jpg) no-repeat center center;
+}
+.rank_10 {
+    background: url(../images/rank_10.jpg) no-repeat center center;
+}
+.bookslist h4 {
+    float: left;
+    height: 38px;
+    width: 210px;
+    line-height: 38px;
+    font-size: 17px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.fenleitushu {
+    border-radius: 5px;
+    border: 2px solid #afafaf;
+
+}
+.fenleitushu .fenlei_title {
+    border-radius: 5px;
+    color:  #c81623;
+    background-color: #afafaf;
+}
+.fenleitushu  .fenlei_title h2 > a {
+    float: left;
+    color:  #c81623;
+    height: 36px;
+    margin-left: 18px;
+    font-size: 18px;
+    font-weight: 550;
+    line-height: 36px;
+    
+}
+.fenleitushu span {
+    /* float: right; */
+    height: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #c81623;
+}
+.fenleitushu span a {
+    display: inline-block;
+    height: 30px;
+    margin: 0 18px;
+    line-height: 30px;
+}
+.fenleitushu .fenleitupian {
+    margin: 10px 5px 0;
+}
+.fenleitupian img {
+    height: 210px;
+    width: 590px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.fenleitushu .fenlei_book {
+    background-color: #afafaf;
+}
+.fenlei_book .fenlei_book_box {
+    background-color: #afafaf;
+}
+.fenlei_book_box li {
+    float: left;
+    margin: 20px 6px;
+    width: 185px;
+    
+}
+.fenlei_book p {
+    font-size: 15px; 
+}

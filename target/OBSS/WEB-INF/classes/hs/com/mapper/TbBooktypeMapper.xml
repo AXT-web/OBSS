@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hs.com.mapper.TbBooktypeMapper" >
+  <resultMap id="BaseResultMap" type="hs.com.entity.TbBooktype" >
+    <id column="BookTypeId" property="booktypeid" jdbcType="INTEGER" />
+    <result column="BookTypeName" property="booktypename" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    BookTypeId, BookTypeName
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_booktype
+    where BookTypeId = #{booktypeid,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_booktype
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_booktype
+    where BookTypeId = #{booktypeid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="hs.com.entity.TbBooktype" >
+    insert into tb_booktype (BookTypeId, BookTypeName)
+    values (#{booktypeid,jdbcType=INTEGER}, #{booktypename,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="hs.com.entity.TbBooktype" >
+    insert into tb_booktype
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="booktypeid != null" >
+        BookTypeId,
+      </if>
+      <if test="booktypename != null" >
+        BookTypeName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="booktypeid != null" >
+        #{booktypeid,jdbcType=INTEGER},
+      </if>
+      <if test="booktypename != null" >
+        #{booktypename,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="hs.com.entity.TbBooktype" >
+    update tb_booktype
+    <set >
+      <if test="booktypename != null" >
+        BookTypeName = #{booktypename,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where BookTypeId = #{booktypeid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="hs.com.entity.TbBooktype" >
+    update tb_booktype
+    set BookTypeName = #{booktypename,jdbcType=VARCHAR}
+    where BookTypeId = #{booktypeid,jdbcType=INTEGER}
+  </update>
+  <select id="selectid" resultType="hs.com.entity.TbBooktype">
+    select
+    <include refid="Base_Column_List" />
+    from tb_booktype
+    where
+    BookTypeId=#{BookTypeId}
+  </select>
+  <delete id="deletebooktypeforid" parameterType="java.lang.Integer" >
+    delete from tb_booktype
+    where BookTypeId = #{booktypeid}
+  </delete>
+  <update id="updatabooktype" parameterType="hs.com.entity.TbBooktype" >
+    update tb_booktype
+    set
+      BookTypeName = #{booktypename}
+    where BookTypeId = #{booktypeid}
+  </update>
+  <select id="selectname" resultType="hs.com.entity.TbBooktype">
+    select
+    <include refid="Base_Column_List" />
+    from tb_booktype
+    where
+    BookTypeName
+    like
+    '%${BookTypeName}%'
+  </select>
+  <insert id="addbooktype" parameterType="hs.com.entity.TbBooktype" >
+    insert into tb_booktype (BookTypeId, BookTypeName)
+    values (#{booktypeid}, #{booktypename})
+  </insert>
+</mapper>
